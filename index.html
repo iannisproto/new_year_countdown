@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year Countdown</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #080613;
+    color: white;
+    font-family: 'Lato';
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+	cursor: none;
+}
+
+.countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    text-align: center;
+    font-size: 12vw;
+    white-space: nowrap;
+    z-index: 10;
+	color: lightgray;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato-Black.ttf') format('truetype');
+}
+</style>
+<body>
+    <div class="countdown" id="countdown">
+        <span id="time">00:00:00:00</span>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
